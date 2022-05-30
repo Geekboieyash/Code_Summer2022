@@ -61,5 +61,31 @@ int main()
    // worst case is linear in nature, o{set size}
    //tle -> switch to set 
 
+   // multiset
+
+   multiset<int> ms;
+   ms.insert(1);
+   ms.insert(1);
+   ms.insert(2);
+   ms.insert(2);
+   ms.insert(3); // ms.emplace{3}
+   // st -> {1,1,2,2,3}
+
+   ms.erase(2);
+
+   // map 
+
+   map<string, int> mpp;
+   // map is always sorted according to the keys 
+   mpp["raj"] = 27;
+   mpp["yash"] = 31;
+   mpp["abhay"] = 40;
+   // likes think it may go on
+   mpp.emplace("xx", 46); // mapp.erase(key)
+   mpp.erase("xx");
+   mpp.clear();
+   
+   
+
    return 0;
 }
