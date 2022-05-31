@@ -7,36 +7,26 @@ using namespace std;
 #define vll vector<ll>
 const int N = 1e5 + 11, mod = 1e9 + 7;
 #define pb push_back
-// https://www.codechef.com/submit-v2/CLOSEVOWEL?tab=statement
-
 void solve()
 {
-  int n;
-  cin >> n;
-  string s;
-  cin >> s;
-  // vowels  (aeiou) a  b(c)d  e  f(g)h  i  jk(l)mn  o  pq(r)st  u  vwxyz
-  //
-  ll ans = 1;
+  string n;
+  getline(cin, n);
+  int x;
+  cin >> x;
 
-  for (int i = 0; i < n; i++)
+  string array[x];
+  for (int i = 0; i < x; i++)
   {
-    if (s[i] == 'c' || s[i] == 'g' || s[i] == 'l' || s[i] == 'r')
-    {
-      ans *= 2;
-      ans %= mod;
-    }
+    cin >> array[i];
   }
-  cout << ans << endl;
 }
 int main()
 {
-  _fast;
 #ifndef ONLINE_JUDGE
   freopen("input.txt", "r", stdin);
   freopen("output.txt", "w", stdout);
 #endif
-
+  _fast;
   int t;
   cin >> t;
   while (t--)
