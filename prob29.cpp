@@ -7,10 +7,12 @@ using namespace std;
 #define vll vector<ll>
 const int N = 1e5 + 11, mod = 1e9 + 7;
 #define pb push_back
+//https://www.codechef.com/submit-v2/NAME1
 void solve()
 {
   string n;
   getline(cin, n);
+  cout<<"the parent name is "<<n<<"\n";
   int x;
   cin >> x;
 
