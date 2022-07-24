@@ -1,4 +1,4 @@
-//https://www.codechef.com/JULY222D/problems/BURGERS2
+//https://www.codechef.com/JULY222D/problems/DIF_GCD
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -8,15 +8,9 @@ const int N=1e5+11,mod=1e9+7;
 #define pb push_back
 void solve()
 {
-    int a,b,n,r;
-    cin>>a>>b>>n>>r;
-    int x = r-n*a ; 
-    int y = b-a;
-    x = x/y;
-    if(x > n) cout<<"0 "<<n<<"\n";
-    if(x<0) cout<<"-1\n";
-    if(x>=0 && x<n) cout<<n-x<<" "<< x<<"\n";
-    //cout<<x<<'\n'; // if x  less than 0 than output -1 and if greater than then output 0 n    
+    int x,y,n,r;
+    cin>>x>>y>>n>>r;
+    
 }
 int main()
 {
