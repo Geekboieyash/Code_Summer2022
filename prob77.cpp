@@ -12,8 +12,8 @@ void solve()
     cin>>a>>b>>n;
     int flag = 1 ;
     int num,x = n/a;
-
     if(b%a == 0 || a%b == 0) cout<<"-1\n";
+    
     else if(n%a == 0 && n%b != 0) cout<<n<<"\n";
     while(flag!= 0)
     {
@@ -22,11 +22,14 @@ void solve()
         flag = 0;}
         else x++;
     }
-    
 }
 int main()
 {
     _INVINCI;
+#ifndef ONLINE_JUDGE
+freopen("output.txt","w", stdout);
+freopen("input.txt ","r", stdin);
+#endif
     int t; cin>>t;
     while(t--)
     {
