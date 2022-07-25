@@ -13,16 +13,31 @@ void solve()
     int flag = 1 ;
     int num,x = n/a;
 
-    if(b%a == 0 || a%b == 0) cout<<"-1\n";
-    else if(n%a == 0 && n%b != 0) cout<<n<<"\n";
-    while(flag!= 0)
-    {
-        num = x*a;
-        if(num >= n && (num)%b != 0){ cout<<num<<"\n";
-        flag = 0;}
-        else x++;
+    if(a%b == 0) cout<<"-1\n";
+    else{
+        if(n%a == 0)
+        {
+            if(n%b == 0)
+            {
+                x++;
+            }
+            cout<<x*a<<"\n";
+        }
+        else
+        {
+            x++;
+            num = x*a;
+            if(num%b == 0){
+                x++;
+            }
+            num = x*a;
+            cout<<num<<"\n";
+        }
     }
+    // if(b%a == 0 || a%b == 0)cout<<"-1\n";
     
+  
+
 }
 int main()
 {
