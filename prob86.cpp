@@ -1,4 +1,3 @@
-//https://www.codechef.com/submit/DIF_GCD
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -8,10 +7,27 @@ const int N=1e5+11,mod=1e9+7;
 #define pb push_back
 void solve()
 {
-	int a;
-	cin>>a;
-	if(a>20) cout<<"HOT\n";
-	else cout<<"COLD\n";
+ int a,b;
+ cin>>a>>b;
+ int x=0,y=0;
+ string s;cin>>s;
+ for(int i = 0; i<a; i++)
+ {
+ 	if(s[i] == '1') x++;
+ 	else y++;
+ }   
+ int diff = abs(x-y);
+ int ans = 0;
+ if(diff%b)
+ {
+ 	ans++;
+ }
+
+ diff /= b;
+ diff += ans;
+
+ cout<<diff<<"\n";
+
 }
 int main()
 {
