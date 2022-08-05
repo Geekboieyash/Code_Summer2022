@@ -8,9 +8,22 @@ const int N=1e5+11,mod=1e9+7;
 #define pb push_back
 void solve()
 {
-    int n,k; cin>>n;
+    vector<int> myvector;
+    myvector.push_back(3);
+    myvector.push_back(4);
+    myvector.push_back(1);
+    myvector.push_back(7);
+    myvector.push_back(2);
+    // Vector becomes 3, 4, 1, 7, 2
+    int n  = myvector.size();
+    for (int i = 0; i < n; ++i)
+    {
+    	cout << myvector.back();    
+    //myvector.pop_back();
+    }
     
 }
+
 int main()
 {
     _INVINCI;
