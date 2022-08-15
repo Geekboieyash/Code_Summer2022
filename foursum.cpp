@@ -19,7 +19,7 @@ void solve()
     for (int i = 0; i < n; ++i)
     {
     	cout << myvector.back();    
-    //myvector.pop_back();
+    myvector.pop_back();
     }
     
 }

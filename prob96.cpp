@@ -10,10 +10,28 @@ const int N=1e5+11,mod=1e9+7;
 
 void solve()
 {
-    int n ; cin>>n;
-    n=2*n;
-    vll v(n);
+    int a,b; cin>>a>>b;
+    if(a>b){
+        float x = a/b;
+        int r = b%a;
+        float y = log2(x);
+        int z = y;
+        //cout<<x<<" "<<y<<" "<<z<<" ";
+        if(y == z && r==0) cout<<"YES\n";
+        else cout<<"NO\n";
+    }
+    else
+    {
+        float x = b/a;
+        int r = b%a;
+        float y = log2(x);
+        int z = y;
+       // cout<<x<<" "<<y<<" "<<z<<" ";
+        if(y == z && r==0) cout<<"YES\n";
+        else cout<<"NO\n";
+    }
 }
+
 int main()
 {
     _INVINCI;
