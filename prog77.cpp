@@ -1,33 +1,42 @@
-//https://www.codechef.com/START48D/problems/CIREQ
-#include <bits/stdc++.h>
-using namespace std;
-#define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
-#define ll long long 
-#define vll vector<ll>
-const int N=1e5+11,mod=1e9+7;
-#define pb push_back
-void solve()
+class Solution
 {
-  int n;cin>>n;
-  vll v(n);
-  for (int i = 0; i < n; i++)
+public:
+  vector<vector<int>> threeSum(vector<int> &nums)
   {
-    cin>>v[i];
-  }
-  
-     
-}
-int main()
-{
-    _INVINCI;
-#ifndef ONLINE_JUDGE
-freopen("output.txt","w", stdout);
-freopen("input.txt ","r", stdin);
-#endif
-    int t; cin>>t;
-    while(t--)
+    vector<vector<int>> threeSum(vector<int> & nums)
     {
-      solve();
-    }
-    return 0;
-}
+      sort(nums.begin(), nums.end());
+
+      vector<vector<int>> res;
+
+      for (int i = 0; i < nums.size() - 2; i++)
+      {
+        if (i == 0 || (nums[i] != nums[i - 1] && i > 0))
+        {
+          int low = i + 1, high = nums.size() - 1, sum = 0 - nums[i];
+          while (low < high)
+          {
+            if (nums[low] + nums[high] == sum)
+            {
+              vector<int> temp;
+              temp.push_back(nums[i]);
+              temp.push_back(nums[low]);
+              temp.push_back(nums[high]);
+              res.push_back(temp);
+              while (low < high && nums[low] == nums[low++])
+                low++;
+              while (low < high && nums[high] == nums[high - 1])
+                high--;
+              low++;
+              high--;
+            }
+            else if (nums[low] + nums[high] < sum)
+              low++;
+            else
+              high++;
+          }
+        }
+      }
+
+      return res;
+    };
