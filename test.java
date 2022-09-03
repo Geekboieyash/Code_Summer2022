@@ -1,7 +1,9 @@
+import java.util.ArrayList;
+
 public class Test
 {
 	public static void main(String[] args)
 	{
-		java.util.ArrayList l = new java.util.ArrayList(); 
+		ArrayList l = new java.util.ArrayList(); 
 	}	
-}
+}  
