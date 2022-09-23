@@ -1,4 +1,4 @@
-engi//https://www.spoj.com/problems/AGGRCOW/
+//https://www.codechef.com/START57C/problems/EVENSPLIT
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -10,15 +10,33 @@ const int N=1e5+11,mod=1e9+7;
 #define pb push_back
 #define srt(v) sort(v.begin(), v.end())
 
-
 void solve()
 {
-    int n,m;
-    cin>>n>>m;
-    vll v(n);
-    loop(i,0,n) cin>>v[i];
-    srt(v);
-    
+    int n;
+    cin>>n;
+    string s; cin>>s;
+    int o = 0, z =0;
+    for (int i = 0; i < n; ++i)
+    {
+    	if(s[i] == '1')
+    	{
+    		o++;
+    	}
+    	else z++;
+    }
+    if(n <= 2) cout<<s<<"\n";
+    else{
+    string ans = "";
+    while(z--)
+    {
+    	ans += "0"; 
+    }
+    while(o--)
+    {
+    	ans += "1";
+    }
+    cout<<ans<<"\n";
+}
 }
 int main()
 {

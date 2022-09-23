@@ -1,4 +1,4 @@
-engi//https://www.spoj.com/problems/AGGRCOW/
+//https://www.codechef.com/START57C/problems/NONNEGPROD
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -10,15 +10,23 @@ const int N=1e5+11,mod=1e9+7;
 #define pb push_back
 #define srt(v) sort(v.begin(), v.end())
 
-
 void solve()
 {
-    int n,m;
-    cin>>n>>m;
-    vll v(n);
-    loop(i,0,n) cin>>v[i];
-    srt(v);
-    
+    int n; cin>>n;
+    int count = 0;
+    int flag =0;
+    while(n--)
+    {
+    	int x; cin>>x;
+
+    	if(x <0)
+    	{
+    		count++;
+    	}
+    	if(x == 0) flag = 1;
+    }
+    if(count%2 == 0 || flag == 1) cout<<"0\n";
+    else cout<<"1\n";
 }
 int main()
 {

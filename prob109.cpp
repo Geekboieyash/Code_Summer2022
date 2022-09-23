@@ -1,4 +1,4 @@
-engi//https://www.spoj.com/problems/AGGRCOW/
+//https://codeforces.com/contest/1733/problem/0
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -10,15 +10,19 @@ const int N=1e5+11,mod=1e9+7;
 #define pb push_back
 #define srt(v) sort(v.begin(), v.end())
 
-
 void solve()
 {
-    int n,m;
-    cin>>n>>m;
+    int n, k;
+    cin>>n>>k;
     vll v(n);
-    loop(i,0,n) cin>>v[i];
-    srt(v);
+    for(int i =0; i< n ; i++)
+    {
+    	cin>>v[i];
+    }
+    if(n == 1) cout<<v[0]<<"\n";
     
+
+
 }
 int main()
 {
