@@ -1,4 +1,4 @@
-//https://www.codechef.com/START57C/problems/MAXEXP
+//https://codeforces.com/contest/1730/problem/a
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -12,39 +12,25 @@ const int N=1e5+11,mod=1e9+7;
 
 void solve()
 {
-    int n; cin>>n;
-    string s; cin>>s;
-    int plus =0, minus=0, d = 0;
-    int di[10] = {0};
+    int n,a;
+    cin>>n>>a;
+
+    unordered_map<int, int> mp;
     for (int i = 0; i < n; ++i)
     {
-    	if(s[i]=='+')
-    	{
-    		plus++;
-    	}
-    	else if(s[i] == '-')
-    	{
-    		minus++;
-    	}
-    	else
-    	{
-    		di[s[i] - '0']++;
-    		d++;
-    	}
+    	int x; cin>>x;
+    	mp[x]++;
     }
-
-    vll v(d);
-    for (int i = 0, x=0; i <= 9; ++i)
+    int sum = 0;
+    for(auto&i : mp)
     {
-    	if(di[i] == 1)
-    	{
-    		v[x] = i;
-    		x++; 
-    	}
+    	int x = i.second;
+    	int y = a;
+    	sum += min(x,y);
     }
+    cout<<sum<<"\n";
     
 
-    cout<<"\n";
 }
 int main()
 {
