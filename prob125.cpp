@@ -12,31 +12,26 @@ const int N=1e5+11,mod=1e9+7;
 
 void solve()
 {
-	int a,b,c;
-	cin>>a>>b>>c;
-	int sum = a+b+c;
-	int flag = 0;
-	if(sum - a == a)
-	{
-		flag=1;
-	}
-    if(sum - c  == c)
-	{
-		flag=1;
-	}
-	if(sum - b == b)
-	{
-		flag=1;
-	}
-	if(flag == 1)
-	{
-		cout<<"YES\n";
-	}
-	else
-	{
-		cout<<"NO\n";
-	}
+ vector<string> v(8);
+ for (int i = 0; i < 8; ++i)
+ {
+ 	cin>>v[i];
+ }
+ int flag = 0;
+ for (int i = 0; i < 8; ++i)
+ {
+ 	string s1("RRRRRRRR");
+ 		if (v[i] == s1)
+ 		{
+ 			flag =1;
+ 		}
+ }
+
+ if(flag == 1)
+ 	{cout<<"R\n";}
+ else cout<<"B\n";
 }
+
 int main()
 {
     _INVINCI;

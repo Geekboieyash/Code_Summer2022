@@ -12,30 +12,25 @@ const int N=1e5+11,mod=1e9+7;
 
 void solve()
 {
-	int a,b,c;
-	cin>>a>>b>>c;
-	int sum = a+b+c;
-	int flag = 0;
-	if(sum - a == a)
-	{
-		flag=1;
-	}
-    if(sum - c  == c)
-	{
-		flag=1;
-	}
-	if(sum - b == b)
-	{
-		flag=1;
-	}
-	if(flag == 1)
-	{
-		cout<<"YES\n";
-	}
-	else
-	{
-		cout<<"NO\n";
-	}
+    int n;
+    cin>>n;
+    unordered_map<int, int> mp;
+    for (int i = 0; i < n; ++i)
+    {
+    	int x; cin>>x;
+    	mp[x]++;
+    }
+    int flag =0;
+    for (auto& i: mp)
+    {
+    	if(i.second > 1)
+    	{
+    		flag = 1;
+    	}
+    	//cout<<i.first<<": "<<i.second<<endl;
+    }
+    if(flag == 0) cout<<"YES\n";
+    else cout<<"No\n";
 }
 int main()
 {
