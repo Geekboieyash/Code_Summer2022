@@ -1,4 +1,4 @@
-
+//
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -10,51 +10,28 @@ const int N=1e5+11,mod=1e9+7;
 #define pb push_back
 #define srt(v) sort(v.begin(), v.end())
 
+int Prime(int n)
+{
+    
+    if (n % 2 == 0) return 2;
+ 
+    for (int  i = 3; i * i <= n; i += 2) {
+        if (n % i == 0)
+            return i;
+    }
+ 
+    return n;
+}
+
+
 void solve()
 {
- int a, b; cin>>a>>b;
- if(a==b){
- 	if(a%2 == 0)
- 	{
- 		cout<<"CHEFINA\n";
- 	}
- 	else
- 	{
- 		cout<<"CHEF\n";
- 	}
- }
- if(a>b){
- 	if(a-b>=2)
- 	{
- 		cout<<"CHEF\n";
- 	}
- 	else
- 	{
- 		if(a%2 == 0)
- 		{
- 			cout<<"CHEF\n";
- 		}
- 		else{
- 			cout<<"CHEFINA\n";
- 		}
- 	}
- }   
- if(b>a){
- 	if(b-a>=2)
- 	{
- 		cout<<"CHEFINA\n";
- 	}
- 	else
- 	{
- 		if(a%2 == 0)
- 		{
- 			cout<<"CHEFINA\n";
- 		}
- 		else{
- 			cout<<"CHEF\n";
- 		}
- 	}
- }
+    int x, y;
+    cin>>x>>y;
+    x = x + Prime(x);
+    cout<<1+(y-x+1)/2<<"\n";
+
+
 }
 int main()
 {

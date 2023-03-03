@@ -1,4 +1,4 @@
-
+//
 #include <bits/stdc++.h>
 using namespace std;
 #define _INVINCI ios_base::sync_with_stdio(false); cin.tie(NULL);
@@ -12,49 +12,18 @@ const int N=1e5+11,mod=1e9+7;
 
 void solve()
 {
- int a, b; cin>>a>>b;
- if(a==b){
- 	if(a%2 == 0)
- 	{
- 		cout<<"CHEFINA\n";
- 	}
- 	else
- 	{
- 		cout<<"CHEF\n";
- 	}
- }
- if(a>b){
- 	if(a-b>=2)
- 	{
- 		cout<<"CHEF\n";
- 	}
- 	else
- 	{
- 		if(a%2 == 0)
- 		{
- 			cout<<"CHEF\n";
- 		}
- 		else{
- 			cout<<"CHEFINA\n";
- 		}
- 	}
- }   
- if(b>a){
- 	if(b-a>=2)
- 	{
- 		cout<<"CHEFINA\n";
- 	}
- 	else
- 	{
- 		if(a%2 == 0)
- 		{
- 			cout<<"CHEFINA\n";
- 		}
- 		else{
- 			cout<<"CHEF\n";
- 		}
- 	}
- }
+	int n ;cin>>n;
+
+    string s; cin>>s;
+    string cat = "meow";
+    string Cat = "MEOW";
+   
+    for (int i = 0, j=0; i < n; ++i)
+    {
+    	cout<<s[i]<<" ";
+    	
+    }
+    cout<<"YES\n";
 }
 int main()
 {
